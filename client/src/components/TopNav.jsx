@@ -11,6 +11,15 @@ const TopNav = () => (
           className="button"
           color="inherit"
           onClick={() => {
+            window.location = '/';
+          }}
+        >
+          {'Create Survey'}
+        </Button>
+        <Button
+          className="button"
+          color="inherit"
+          onClick={() => {
             window.location = '/results';
           }}
         >

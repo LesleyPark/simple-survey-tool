@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import TopNav from './components/TopNav';
 import CreateSurvey from './components/CreateSurvey';
+import axios from 'axios';
 
 const App = () => {
   const [startSurvey, setStartSurvey] = useState(false);
-  const [title, setTitle] = useState(false);
+  const [title, setTitle] = useState('');
+
+  const handleSubmit = () => {
+    setStartSurvey(true);
+    // console.log(title)
+    axios.post(title);
+  }
 
   return (
     <div className="app">
       <TopNav />
-      {/* { startSurvey ? 
+      { startSurvey ? 
         <CreateSurvey />
       : 
         <div className="start-survey">
@@ -30,14 +36,14 @@ const App = () => {
             color="inherit"
             variant="contained"
             onClick={() => {
-              setStartSurvey(true);
+              handleSubmit();
             }}
           >
             {'CREATE SURVEY'}
           </Button>
         </div>
-      } */}
-      <CreateSurvey />
+      }
+      {/* <CreateSurvey /> */}
     </div>
   )
 };

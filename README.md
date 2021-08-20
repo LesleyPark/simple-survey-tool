@@ -7,11 +7,11 @@ First off, clone this repo
 ```bash
 git clone 
 ```
-As usual, install all relevant packages (this might take a little bit)
+As usual, install all relevant packages (this might take a little while)
 ```bash
 npm install
 ```
-Next, create that bundle
+Next, create your bundle
 ```bash
 npm run-script build
 ```
@@ -25,10 +25,12 @@ http://localhost:9000/
 ```
 
 
-## To be completed 
+## TODO
 ### Results Viewer
   * Averages
   *
+### Survey ID hash
+  * Anonymizes 
 ### Tests
   * Unit tests
   * E2E tests

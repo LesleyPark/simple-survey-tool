@@ -7,11 +7,16 @@ const controllers = {
     .catch (err => console.error(err))
   },
 
-  // createSurvey: (req, res) => {
-  //   // res.status(200).send()
-  //   // .catch (err => console.error(err))
-  //   res.send(200)
-  // }
+  submitTitle: (req, res) => {
+    const {title} = req.body;
+    db.surveys.create({
+      title
+    })
+    .then(survey => {
+      res.status(201).send(survey)
+    })
+    .catch(err => console.error(err)) 
+  },
 }
 
 module.exports = controllers;

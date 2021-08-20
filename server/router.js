@@ -3,8 +3,6 @@ const controllers = require('./controllers');
 
 router.route('/')
   .get(controllers.get)
-
-// router.route('/create')
-//   .get(controllers.createSurvey)
+  .post(controllers.submitTitle)
 
 module.exports = router;
