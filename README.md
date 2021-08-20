@@ -5,7 +5,7 @@ A simple survey tool that allows users to submit numeric rating questions
 ## Getting Started
 First off, clone this repo
 ```bash
-git clone 
+git clone https://github.com/LesleyPark/simple-survey-tool.git
 ```
 As usual, install all relevant packages (this might take a little while)
 ```bash
