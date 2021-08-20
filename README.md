@@ -52,6 +52,7 @@ http://localhost:9000/
 
 ## Misc
 ### Nice to haves for V2
+  * Refactor CSS (setup styled components/CSS modules in case the scope of the project grows in future; current CSS monolith is for MVP purposes only)
   * Cleaner question display (Material UI cards or something similar)
   * Generate hashed survey link for privacy
   * Ability to clone surveys
