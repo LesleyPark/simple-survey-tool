@@ -32,7 +32,7 @@ http://localhost:9000/
   * TextField validation to ensure no empty submits on both survey name + questions
   * Displays each question as it's submitted
 
-### In Progress
+## In Progress
   * Database setup
   * Finish survey button sends post request that sends all survey questions to db along with setting a corresponding survey ID (blocked by db setup)
 
@@ -64,4 +64,3 @@ http://localhost:9000/
   * For survey response view, a graphic that shows the average response relative to the max (Harvey balls or something similar?)
 ### Other Concerns
   * Should number of survey questions be limited? If not, need to rethink UI choice for question display
-  * 
