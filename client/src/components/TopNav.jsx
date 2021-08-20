@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 const TopNav = () => (
   <div className="top-nav">
-    <AppBar position="static">
+    <AppBar position="static" style={{ background: '#2E3B55' }}>
       <Toolbar>
         <Button
           className="button"

@@ -48,7 +48,6 @@ const App = () => {
           </Button>
         </div>
       }
-      {/* <CreateSurvey /> */}
     </div>
   )
 };

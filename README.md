@@ -25,17 +25,21 @@ http://localhost:9000/
 ```
 
 ## Completed
-### Survey Creation Steps (Front-End)
-  * Start a new survey
+### Survey Creation Steps
+  * Navbar
+  * Begin a new survey
   * Submit questions
   * TextField validation to ensure no empty submits on both survey name + questions
   * Displays each question as it's submitted
 
+### In Progress
+  * Database setup
+  * Finish survey button sends post request that sends all survey questions to db along with setting a corresponding survey ID (blocked by db setup)
+
 ## TODO
 ### Survey Creation Steps
   * Functionality to delete questions
-  * Finish survey button sends post request that sends all survey questions to db with corresponding survey ID
-  * Displays corresponding link to send to surveys to other users/view finished survey (`surveys/${id}` route)
+  * Displays corresponding link to send to surveys to other users/view finished survey upon survey creation completion (`surveys/${id}` route)
 ### Survey Taking Steps
   * Lists all survey questions along with Material UI small steps slider for input
   * Post request with values for each response upon final submit
@@ -48,16 +52,16 @@ http://localhost:9000/
 
 ## Misc
 ### Nice to haves for V2
-  * Nicer question display (Material UI cards?)
-  * Hashed survey link (for privacy)
-  * Ability to change survey questions after submission
+  * Cleaner question display (Material UI cards or something similar)
+  * Generate hashed survey link for privacy
   * Ability to clone surveys
+  * Ability to change survey questions after submission
   * Allow for different question types
-  * Login to 1) verify credentials for respondents and survey creators 2) give access to survey results only to survey creators
+  * Login functionality to 1) verify credentials for respondents and survey creators 2) give access to survey results only to survey creators
   * Better accessibility
-  * More dynamic UI
-  * More unified color scheme
-  * Branding
-  * Dynamic labels on TextField
+  * Unified color scheme + branding + icons corresponding to actions
+  * Dynamic labels on TextField (e.g. "Add a question," "More questions!", "And another!", etc.)
+  * For survey response view, a graphic that shows the average response relative to the max (Harvey balls or something similar?)
 ### Other Concerns
-  * Should number of survey questions be limited?
+  * Should number of survey questions be limited? If not, need to rethink UI choice for question display
+  * 

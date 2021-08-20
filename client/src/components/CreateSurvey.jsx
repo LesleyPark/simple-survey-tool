@@ -45,7 +45,7 @@ const CreateSurvey = () => {
         </div>
         <TextField 
           name="question"
-          label="Add some questions"
+          label="Add a question"
           value={question}
           onChange={(event) => setQuestion(event.target.value)}
           inputProps={{min: 0, style: { textAlign: 'center' }}}
