@@ -13,10 +13,20 @@ const controllers = {
       title
     })
     .then(survey => {
-      res.status(201).send(survey)
+      res.status(201).send(survey.id)
     })
     .catch(err => console.error(err)) 
   },
+
+  submitQuestions: (req, res) => {
+    const {questions, surveyId} = req.body;
+    questions.forEach (question => {
+      db.questions.create({
+        question,
+        surveyId
+      })
+    })
+  }
 }
 
 module.exports = controllers;
