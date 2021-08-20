@@ -27,19 +27,37 @@ http://localhost:9000/
 ## Completed
 ### Survey Creation Steps (Front-End)
   * Start a new survey
-  * Submit questions to the survey until finish button is complete
+  * Submit questions
+  * TextField validation to ensure no empty submits on both survey name + questions
+  * Displays each question as it's submitted
 
 ## TODO
 ### Survey Creation Steps
-  * Displays corresponding link to send out once the survey once finalized submitted (nice to have: hashed IDs for link for privacy)
+  * Functionality to delete questions
+  * Finish survey button sends post request that sends all survey questions to db with corresponding survey ID
+  * Displays corresponding link to send to surveys to other users/view finished survey (`surveys/${id}` route)
 ### Survey Taking Steps
-  * Shows all survey questions along with Material UI small steps slider for input
-  * Records responses upon final submit
+  * Lists all survey questions along with Material UI small steps slider for input
+  * Post request with values for each response upon final submit
 ### Results Viewer
-  * Displays question and average response
-  * Also displays response from each user
+  * Displays each question and corresponding average response in Material UI accordion
+  * Upon accordian expansion, lists individual responses from each user
 ### Tests
   * Unit tests
   * E2E tests
-### Survey ID hash
-  * Anonymized ID hashes for each survey for privacy
+
+## Misc
+### Nice to haves for V2
+  * Nicer question display (Material UI cards?)
+  * Hashed survey link (for privacy)
+  * Ability to change survey questions after submission
+  * Ability to clone surveys
+  * Allow for different question types
+  * Login to 1) verify credentials for respondents and survey creators 2) give access to survey results only to survey creators
+  * Better accessibility
+  * More dynamic UI
+  * More unified color scheme
+  * Branding
+  * Dynamic labels on TextField
+### Other Concerns
+  * Should number of survey questions be limited?

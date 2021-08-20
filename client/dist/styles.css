@@ -35,7 +35,7 @@ body {
   text-align: center;
   min-width: 900px;
   left: 50%;
-  top: 50%;
+  top: 15%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -46,5 +46,16 @@ body {
 }
 
 .submit-spacer {
-  margin: 100px;
+  margin: 50px;
+}
+
+.questions-container {
+  position: absolute;
+  text-align: center;
+  min-width: 900px;
+  left: 50%;
+  top: 60%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }

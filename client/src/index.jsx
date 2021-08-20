@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
@@ -9,11 +9,14 @@ import axios from 'axios';
 const App = () => {
   const [startSurvey, setStartSurvey] = useState(false);
   const [title, setTitle] = useState('');
+  const [submitCount, setSubmitCount] = useState(0);
 
   const handleSubmit = () => {
-    setStartSurvey(true);
-    // console.log(title)
-    axios.post(title);
+    setSubmitCount(submitCount + 1);
+    if (title) {
+      setStartSurvey(true);
+      axios.post(title);
+    }
   }
 
   return (
@@ -28,6 +31,8 @@ const App = () => {
             label="Give your survey a name"
             onChange={(event) => setTitle(event.target.value)}
             inputProps={{min: 0, style: { textAlign: 'center' }}}
+            error={title === '' && submitCount > 0}
+            helperText={title === '' && submitCount > 0 ? 'Field cannot be empty' : ''}
             fullWidth
           />
           <div className="create-spacer" />
